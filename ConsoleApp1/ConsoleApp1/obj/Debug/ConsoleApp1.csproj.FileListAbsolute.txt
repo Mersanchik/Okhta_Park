@@ -1,0 +1,27 @@
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.dll
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.dll
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.xml
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\bin\Debug\ru\EntityFramework.resources.dll
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+H:\Учебная практика 4 курс\день 3\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.dll
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.dll
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.xml
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\bin\Debug\ru\EntityFramework.resources.dll
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\Производственная практика\Брюханова\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="CodeClient" />
+    </Key>
+    <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CodeClient" Type="Int32" Nullable="false" />
+    <Property Name="PassportData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Clients" FromRole="Clients" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="CodeEmployee" />
+    </Key>
+    <Property Name="CodeEmployee" Type="Int32" Nullable="false" />
+    <Property Name="id_Post" Type="Int32" />
+    <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Post" Relationship="Self.FK__Employee__id_Pos__0880433F" FromRole="Employee" ToRole="Post" />
+    <NavigationProperty Name="LogInSystems" Relationship="Self.FK_LogInSystem_Employee" FromRole="Employee" ToRole="LogInSystem" />
+  </EntityType>
+  <EntityType Name="LogInSystem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_CodeEmployee" Type="Int32" Nullable="false" />
+    <Property Name="LastEntry" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="InputType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_LogInSystem_Employee" FromRole="LogInSystem" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateСreation" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TimeOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_CodeClient" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateClosing" Type="DateTime" Precision="0" />
+    <Property Name="TimeRental" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_Orders_Clients" FromRole="Orders" ToRole="Clients" />
+    <NavigationProperty Name="ServicesOrders" Relationship="Self.FK_ServicesOrders_Orders" FromRole="Orders" ToRole="ServicesOrders" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="idPost" />
+    </Key>
+    <Property Name="idPost" Type="Int32" Nullable="false" />
+    <Property Name="NamePost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__id_Pos__0880433F" FromRole="Post" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NameService" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CodeService" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CostHour" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="ServicesOrders" Relationship="Self.FK_ServicesOrders_Services" FromRole="Services" ToRole="ServicesOrders" />
+  </EntityType>
+  <EntityType Name="ServicesOrder">
+    <Key>
+      <PropertyRef Name="idServiceOrder" />
+    </Key>
+    <Property Name="idServiceOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Order" Type="Int32" Nullable="false" />
+    <Property Name="Services" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_ServicesOrders_Orders" FromRole="ServicesOrders" ToRole="Orders" />
+    <NavigationProperty Name="Service" Relationship="Self.FK_ServicesOrders_Services" FromRole="ServicesOrders" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Orders_Clients">
+    <End Role="Clients" Type="Self.Client" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="CodeClient" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="id_CodeClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__id_Pos__0880433F">
+    <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="idPost" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="id_Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LogInSystem_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="LogInSystem" Type="Self.LogInSystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="CodeEmployee" />
+      </Principal>
+      <Dependent Role="LogInSystem">
+        <PropertyRef Name="id_CodeEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicesOrders_Orders">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="ServicesOrders" Type="Self.ServicesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ServicesOrders">
+        <PropertyRef Name="Id_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicesOrders_Services">
+    <End Role="Services" Type="Self.Service" Multiplicity="1" />
+    <End Role="ServicesOrders" Type="Self.ServicesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ServicesOrders">
+        <PropertyRef Name="Services" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ParkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="LogInSystems" EntityType="Self.LogInSystem" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Posts" EntityType="Self.Post" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="ServicesOrders" EntityType="Self.ServicesOrder" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Orders_Clients" Association="Self.FK_Orders_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__id_Pos__0880433F" Association="Self.FK__Employee__id_Pos__0880433F">
+      <End Role="Post" EntitySet="Posts" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LogInSystem_Employee" Association="Self.FK_LogInSystem_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="LogInSystem" EntitySet="LogInSystems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicesOrders_Orders" Association="Self.FK_ServicesOrders_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="ServicesOrders" EntitySet="ServicesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicesOrders_Services" Association="Self.FK_ServicesOrders_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="ServicesOrders" EntitySet="ServicesOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

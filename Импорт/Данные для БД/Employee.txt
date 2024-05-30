@@ -1,0 +1,11 @@
+CodeEmployee	idPost	FIO	Login	Password	Image	PhotoPath
+101	2	Иванов Иван Иванович	Ivanov@namecomp.ru	2L6KZG		\EmployeeImport\Иванов.jpeg
+102	2	Петров Петр Петрович	petrov@namecomp.ru	uzWC67		\EmployeeImport\Петров.jpeg
+103	1	Федоров Федор Федорович	fedorov@namecomp.ru	8ntwUp		\EmployeeImport\Федоров.jpeg
+104	3	Миронов Вениамин Куприянович	mironov@namecomp.ru	YOyhfR		\EmployeeImport\Миронов.jpeg
+105	3	Ширяев Ермолай Вениаминович	shiryev@namecomp.ru	RSbvHv		\EmployeeImport\Ширяев.jpeg
+106	3	Игнатов Кассиан Васильевич	ignatov@namecomp.ru	rwVDh9		\EmployeeImport\Игнатов.jpg
+107	2	Хохлов Владимир Мэлсович	hohlov@namecomp.ru	LdNyos		\EmployeeImport\Хохлов.jpeg
+108	2	Стрелков Мстислав Георгьевич	strelkov@namecomp.ru	gynQMT		\EmployeeImport\Стрелков.jpeg
+109	2	Беляева Лилия Наумовна	belyeva@@namecomp.ru	AtnDjr		\EmployeeImport\Беляева.jpeg
+110	2	Смирнова Ульяна Гордеевна	smirnova@@namecomp.ru	JlFRCZ		\EmployeeImport\Смирнова.jpeg

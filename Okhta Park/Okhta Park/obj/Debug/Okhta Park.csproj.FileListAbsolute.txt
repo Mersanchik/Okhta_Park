@@ -1,0 +1,64 @@
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.csproj.AssemblyReference.cache
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddClient.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddConsumables.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddEmployee.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddOrder.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Administrator.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Captcha.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditClient.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditConsumables.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditEmployee.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditOrder.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\MainWindow.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Seller.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\ShiftSupervisor.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\App.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park_Content.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park_MarkupCompile.cache
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park_MarkupCompile.lref
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\Okhta Park.exe.config
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\Okhta Park.exe
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\Okhta Park.pdb
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\EntityFramework.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\EntityFramework.SqlServer.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\MaterialDesignColors.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\Microsoft.Xaml.Behaviors.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\EntityFramework.xml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\EntityFramework.SqlServer.xml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\MaterialDesignColors.pdb
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\Microsoft.Xaml.Behaviors.xml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\ru\EntityFramework.resources.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\App.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddClient.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddConsumables.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddEmployee.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddOrder.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Administrator.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Captcha.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditClient.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditConsumables.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditEmployee.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditOrder.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\MainWindow.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Seller.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\ShiftSupervisor.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.g.resources
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta_Park.Properties.Resources.resources
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.csproj.GenerateResource.cache
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.csproj.CoreCompileInputs.cache
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.csproj.CopyComplete
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.exe
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\Okhta Park.pdb
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddOrder2.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddOrder2.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddServicesOrder.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditServicesOrder.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddServicesOrder.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\EditServicesOrder.baml
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddServicesOrder2.g.cs
+F:\Производственная практика\Брюханова\Okhta Park\Okhta Park\obj\Debug\AddServicesOrder2.baml

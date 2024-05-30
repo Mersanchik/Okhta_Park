@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ParkModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="CodeClient" />
+    </Key>
+    <Property Name="FIO" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CodeClient" Type="int" Nullable="false" />
+    <Property Name="PassportData" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="CodeEmployee" />
+    </Key>
+    <Property Name="CodeEmployee" Type="int" Nullable="false" />
+    <Property Name="id_Post" Type="int" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Login" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Image" Type="image" />
+    <Property Name="PhotoPath" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "is1_24_ivanovava.dbo.LogInSystem" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="LogInSystem">
+          <Property Name="id_CodeEmployee" Type="int" />
+          <Property Name="LastEntry" Type="date" />
+          <Property Name="InputType" Type="nvarchar(max)" />
+        </EntityType>-->
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CodeOrder" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateСreation" Type="date" Nullable="false" />
+    <Property Name="TimeOrder" Type="time" Precision="7" Nullable="false" />
+    <Property Name="id_CodeClient" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateClosing" Type="date" />
+    <Property Name="TimeRental" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="idPost" />
+    </Key>
+    <Property Name="idPost" Type="int" Nullable="false" />
+    <Property Name="NamePost" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NameService" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CodeService" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CostHour" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicesOrders">
+    <Key>
+      <PropertyRef Name="idServiceOrder" />
+    </Key>
+    <Property Name="idServiceOrder" Type="int" Nullable="false" />
+    <Property Name="Id_Order" Type="int" Nullable="false" />
+    <Property Name="Services" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Employee__id_Pos__0880433F">
+    <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="idPost" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="id_Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "is1_24_ivanovava.dbo.LogInSystem", на которую ссылается связь.
+        <Association Name="FK__LogInSyst__id_Co__0B5CAFEA" />-->
+  <Association Name="FK_Orders_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="CodeClient" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="id_CodeClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicesOrders_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="ServicesOrders" Type="Self.ServicesOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ServicesOrders">
+        <PropertyRef Name="Id_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicesOrders_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="ServicesOrders" Type="Self.ServicesOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ServicesOrders">
+        <PropertyRef Name="Services" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ParkModelContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesOrders" EntityType="Self.ServicesOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Employee__id_Pos__0880433F" Association="Self.FK__Employee__id_Pos__0880433F">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Clients" Association="Self.FK_Orders_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicesOrders_Orders" Association="Self.FK_ServicesOrders_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="ServicesOrders" EntitySet="ServicesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicesOrders_Services" Association="Self.FK_ServicesOrders_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="ServicesOrders" EntitySet="ServicesOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
